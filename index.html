@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <title>JARVIS — Mini Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand"><span class="brand-dot"></span> J.A.R.V.I.S.</div>
+      <div class="status" id="status">СИСТЕМА ГОТОВА</div>
+    </header>
+
+    <section class="hero">
+      <div class="orb-wrap">
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <button class="orb" id="micButton" aria-label="Начать голосовой ввод">
+          <span class="orb-core"></span>
+          <span class="mic">🎙</span>
+        </button>
+      </div>
+      <h1>Чем могу помочь?</h1>
+      <p>Нажми на микрофон или напиши команду ниже.</p>
+    </section>
+
+    <section class="console">
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="message assistant"><span>J</span><p>Привет! Я мини-ассистент. Скажи «который час», «открой YouTube» или «помощь».</p></div>
+      </div>
+      <form id="commandForm" class="command-form">
+        <input id="commandInput" autocomplete="off" placeholder="Напиши команду..." aria-label="Команда">
+        <button type="submit">Отправить ↗</button>
+      </form>
+    </section>
+
+    <footer>ЛОКАЛЬНЫЙ РЕЖИМ · БЕЗ API-КЛЮЧА</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
